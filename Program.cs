@@ -46,8 +46,53 @@ namespace CSharpConsoleGround
             }
 
 
+            string s = "if else";
+            if(s.Length > 2 && s.Substring(0, 2).Equals("if"))
+            {
+
+            }
+
+            Console.WriteLine(test("if else"));
+            Console.WriteLine(test("else"));
+            Console.WriteLine();
+
+            Console.WriteLine(testone("csharp"));
+          
+
+
+
 
             Console.ReadKey();
         }
+
+        //add new string method
+        private static string test(string s)
+        {
+            if (s.Length > 2 && s.Substring(0, 2).Equals("if"))
+            {
+                return s;
+            }
+            return "if " + s;
+        }
+
+        //add substring 
+        private static string testone(string str)
+        {
+            if(str.Length < 3)
+            {
+                return str + str + str;
+            }
+            else
+            {
+                string front = str.Substring(0, 3);
+                return front + str + front;
+            }
+        }
+
+
+
+
+
     }
+   
 }
