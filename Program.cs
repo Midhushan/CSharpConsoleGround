@@ -4,6 +4,8 @@ namespace CSharpConsoleGround
 {
     class Program
     {
+
+        
         static void Main(string[] args)
         {
             Console.WriteLine("print 5 natural numbers using for loop");
@@ -26,6 +28,21 @@ namespace CSharpConsoleGround
 
             }
             Console.WriteLine("Sum of 10 numbers : {0}",sum);
+
+
+            int a = 2;
+            int b = 3;
+            int sum1 = 0;
+            if(a == b)
+            {
+                sum1 = (a + b)* 3;
+                Console.WriteLine("two numbers are same, total : {0}",sum1);
+            }
+            else
+            {
+                sum1 = a + b;
+                Console.WriteLine("two numbers are not same, total : {0}", sum1);
+            }
 
 
 
