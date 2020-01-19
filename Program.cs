@@ -62,21 +62,100 @@ namespace CSharpConsoleGround
 
 
             //check odd or even
-            int num1, rem1;
+            //int num1, rem1;
 
-            Console.Write("Enter the number : ");
-            num1 = Convert.ToInt32(Console.ReadLine());
-            rem1 = num1 % 2;
-            if(rem1 == 0)
+            //Console.Write("Enter the number : ");
+            //num1 = Convert.ToInt32(Console.ReadLine());
+            //rem1 = num1 % 2;
+            //if(rem1 == 0)
+            //{
+            //    Console.WriteLine("{0} is even",num1);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("{0} is odd",num1);
+            //}
+
+            //CHECK Leap year
+
+            //int year;
+
+            //Console.Write("Enter a year : ");
+            //year = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine();
+
+            //if((year % 400) == 0)
+            //{
+            //    Console.WriteLine("{0} is a leap year",year);
+            //}else if((year % 100) == 0)
+            //{
+            //    Console.WriteLine("{0} is a not leap year",year);
+            //}else if((year % 4) == 0)
+            //{
+            //    Console.WriteLine("{0} is a leap year",year);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("{0} is a not leap year",year);
+            //}
+
+            //Calculate electricity bill
+
+            int cusid, cusui;
+            string cusname;
+            double chg, surchg=0, gramt;
+            double netamt = 0;
+            
+
+            Console.Write("\n\n");
+            Console.Write("Calculate Electricity Bill :");
+            Console.Write("_____________________________");
+            Console.Write("\n\n");
+
+            Console.Write("Enter cutomer id : ");
+            cusid = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter customer name :");
+            cusname = Console.ReadLine();
+
+            Console.Write("Enter units : ");
+            cusui = Convert.ToInt32(Console.ReadLine());
+
+            if(cusui < 200)
             {
-                Console.WriteLine("{0} is even",num1);
+                chg = 1.20;
+            }else if(cusui > 200 && cusui < 400)
+            {
+                chg = 1.50;
+            }else if(cusui > 400 && cusui < 600)
+            {
+                chg = 1.80;
+
             }
             else
             {
-                Console.WriteLine("{0} is odd",num1);
+                chg = 2.00;
             }
-          
 
+            gramt = cusui * chg;
+            if(gramt > 300)
+            {
+                surchg = gramt * 15 / 100.0;
+                netamt = surchg + gramt;
+               
+            }
+
+            if (netamt < 100.0)
+            {
+                netamt = 100;
+            }
+
+            Console.Write("\n\n");
+            Console.Write("Customer Id                              :      {0}\n",cusid);
+            Console.Write("Customer Name                            :      {0}\n", cusname);
+            Console.Write("Customer used units                      :      {0}\n", cusui);
+            Console.Write("Amount charges @Rs.{0} per unit          :      {1}\n", chg, gramt);
+            Console.Write("Surcharge Amount                         :      {0}\n", surchg);
+            Console.Write("Net amount paid paid by the customer     :      {0}\n", netamt);
 
 
 
