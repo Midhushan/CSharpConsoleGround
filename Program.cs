@@ -57,6 +57,24 @@ namespace CSharpConsoleGround
             Console.WriteLine();
 
             Console.WriteLine(testone("csharp"));
+
+            Console.WriteLine();
+
+
+            //check odd or even
+            int num1, rem1;
+
+            Console.Write("Enter the number : ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            rem1 = num1 % 2;
+            if(rem1 == 0)
+            {
+                Console.WriteLine("{0} is even",num1);
+            }
+            else
+            {
+                Console.WriteLine("{0} is odd",num1);
+            }
           
 
 
@@ -88,6 +106,8 @@ namespace CSharpConsoleGround
                 return front + str + front;
             }
         }
+
+        
 
 
 
