@@ -101,66 +101,88 @@ namespace CSharpConsoleGround
 
             //Calculate electricity bill
 
-            int cusid, cusui;
-            string cusname;
-            double chg, surchg=0, gramt;
-            double netamt = 0;
+            //int cusid, cusui;
+            //string cusname;
+            //double chg, surchg=0, gramt;
+            //double netamt = 0;
             
 
-            Console.Write("\n\n");
-            Console.Write("Calculate Electricity Bill :");
-            Console.Write("_____________________________");
-            Console.Write("\n\n");
+            //Console.Write("\n\n");
+            //Console.Write("Calculate Electricity Bill :");
+            //Console.Write("_____________________________");
+            //Console.Write("\n\n");
 
-            Console.Write("Enter cutomer id : ");
-            cusid = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter customer name :");
-            cusname = Console.ReadLine();
+            //Console.Write("Enter cutomer id : ");
+            //cusid = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter customer name :");
+            //cusname = Console.ReadLine();
 
-            Console.Write("Enter units : ");
-            cusui = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Enter units : ");
+            //cusui = Convert.ToInt32(Console.ReadLine());
 
-            if(cusui < 200)
-            {
-                chg = 1.20;
-            }else if(cusui > 200 && cusui < 400)
-            {
-                chg = 1.50;
-            }else if(cusui > 400 && cusui < 600)
-            {
-                chg = 1.80;
+            //if(cusui < 200)
+            //{
+            //    chg = 1.20;
+            //}else if(cusui > 200 && cusui < 400)
+            //{
+            //    chg = 1.50;
+            //}else if(cusui > 400 && cusui < 600)
+            //{
+            //    chg = 1.80;
 
-            }
-            else
-            {
-                chg = 2.00;
-            }
+            //}
+            //else
+            //{
+            //    chg = 2.00;
+            //}
 
-            gramt = cusui * chg;
-            if(gramt > 300)
-            {
-                surchg = gramt * 15 / 100.0;
-                netamt = surchg + gramt;
+            //gramt = cusui * chg;
+            //if(gramt > 300)
+            //{
+            //    surchg = gramt * 15 / 100.0;
+            //    netamt = surchg + gramt;
                
-            }
+            //}
 
-            if (netamt < 100.0)
+            //if (netamt < 100.0)
+            //{
+            //    netamt = 100;
+            //}
+
+            //Console.Write("\n\n");
+            //Console.Write("Customer Id                              :      {0}\n",cusid);
+            //Console.Write("Customer Name                            :      {0}\n", cusname);
+            //Console.Write("Customer used units                      :      {0}\n", cusui);
+            //Console.Write("Amount charges @Rs.{0} per unit          :      {1}\n", chg, gramt);
+            //Console.Write("Surcharge Amount                         :      {0}\n", surchg);
+            //Console.Write("Net amount paid paid by the customer     :      {0}\n", netamt);
+
+
+
+            int[] arr = new int[10];
+            int c;
+            Console.Write("Read and print in array");
+            Console.WriteLine();
+            Console.Write("Input 10 numbers in array");
+            Console.WriteLine();
+
+            for(c = 0; c < 10; c++)
             {
-                netamt = 100;
+                Console.Write("Element - {0} : ", c);
+                arr[c] = Convert.ToInt32(Console.ReadLine());
             }
 
-            Console.Write("\n\n");
-            Console.Write("Customer Id                              :      {0}\n",cusid);
-            Console.Write("Customer Name                            :      {0}\n", cusname);
-            Console.Write("Customer used units                      :      {0}\n", cusui);
-            Console.Write("Amount charges @Rs.{0} per unit          :      {1}\n", chg, gramt);
-            Console.Write("Surcharge Amount                         :      {0}\n", surchg);
-            Console.Write("Net amount paid paid by the customer     :      {0}\n", netamt);
-
-
+            Console.Write("Elements in array - ");
+            for(c = 0; c < 10; c++)
+            {
+                Console.Write("{0} ", arr[c]);
+            }
 
             Console.ReadKey();
         }
+
+
+        //end main
 
         //add new string method
         private static string test(string s)
