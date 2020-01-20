@@ -198,8 +198,13 @@ namespace CSharpConsoleGround
             {
                 total = total + array[x];
             }
-
             Console.Write("Sum of all elements in array : {0} ", total);
+
+
+
+
+
+
             Console.ReadKey();
         }
 
