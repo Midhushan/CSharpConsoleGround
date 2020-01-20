@@ -159,25 +159,47 @@ namespace CSharpConsoleGround
 
 
 
-            int[] arr = new int[10];
-            int c;
-            Console.Write("Read and print in array");
-            Console.WriteLine();
-            Console.Write("Input 10 numbers in array");
+            //int[] arr = new int[10];
+            //int c;
+            //Console.Write("Read and print in array");
+            //Console.WriteLine();
+            //Console.Write("Input 10 numbers in array");
+            //Console.WriteLine();
+
+            //for(c = 0; c < 10; c++)
+            //{
+            //    Console.Write("Element - {0} : ", c);
+            //    arr[c] = Convert.ToInt32(Console.ReadLine());
+            //}
+
+            //Console.Write("Elements in array - ");
+            //for(c = 0; c < 10; c++)
+            //{
+            //    Console.Write("{0} ", arr[c]);
+            //}
+
+            //sum of array
+            int[] array = new int[100];
+            int x, y, total = 0;
+
+            Console.Write("Input the number of elements to stored in array : ");
+            y = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Input {0} elements in the array", y);
             Console.WriteLine();
 
-            for(c = 0; c < 10; c++)
+            for (x = 0; x < y; x++)
             {
-                Console.Write("Element - {0} : ", c);
-                arr[c] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("element {0} ", x);
+                array[x] = Convert.ToInt32(Console.ReadLine());
             }
 
-            Console.Write("Elements in array - ");
-            for(c = 0; c < 10; c++)
+            for (x = 0; x < y; x++)
             {
-                Console.Write("{0} ", arr[c]);
+                total = total + array[x];
             }
 
+            Console.Write("Sum of all elements in array : {0} ", total);
             Console.ReadKey();
         }
 
